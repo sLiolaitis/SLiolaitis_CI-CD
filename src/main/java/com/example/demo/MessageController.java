@@ -3,7 +3,6 @@ package com.example.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -38,5 +37,12 @@ public class MessageController {
     @GetMapping(value = "/message/{message}")
     public void saveMessage(@PathVariable String message) {
         repo.save(new Message(message));
+    }
+
+    public String helloWorld() {
+        return "BE works DB success message: DB works";
+    }
+    public String helloWorld1() {
+        return "BE works ";
     }
 }

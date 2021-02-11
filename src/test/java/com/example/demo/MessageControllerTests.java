@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -35,6 +34,6 @@ public class MessageControllerTests {
     @Test
     public void shouldWorkOnlyBE() {
         when(repository.findAll()).thenReturn(new ArrayList<>());
-        assertEquals(MessageController.BE_SUCCESS_MESSAGE, controller.helloWorld());
+        assertEquals(MessageController.BE_SUCCESS_MESSAGE, controller.helloWorld1());
     }
 }
