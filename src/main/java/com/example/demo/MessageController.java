@@ -38,6 +38,11 @@ public class MessageController {
     public void saveMessage(@PathVariable String message) {
         repo.save(new Message(message));
     }
+    
+    @GetMapping(value = "/hello")
+    public String helloMessage() {
+        return "Hello message";
+    }
 
     public String helloWorld() {
         return "BE works DB success message: DB works";
